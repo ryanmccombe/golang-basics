@@ -14,12 +14,12 @@ func main() {
 
 	app.PrepareDB()
 
-	e.GET("/users", app.ListPeople)
-	e.POST("/users", app.CreatePerson)
-	e.DELETE("/users/:id", app.DeletePerson)
-	e.PATCH("/users/:id", app.UpdatePerson)
+	e.GET("/people", app.ListPeople)
+	e.POST("/people", app.CreatePerson)
+	e.DELETE("/people/:id", app.DeletePerson)
+	e.PATCH("/people/:id", app.UpdatePerson)
 
-	e.GET("/users/seed", app.SeedPeople)
+	e.GET("/people/seed", app.SeedPeople)
 
 	e.Logger.Fatal(e.Start(":3001"))
 }
